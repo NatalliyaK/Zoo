@@ -1,0 +1,19 @@
+.button {
+  width: 298px;
+  height: 54px;
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  transition: all 1s;
+  cursor: pointer; }
+  .button--orange {
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%); }
+  .button--rounded {
+    border-radius: 25px; }
+
+/*# sourceMappingURL=button.css.map */

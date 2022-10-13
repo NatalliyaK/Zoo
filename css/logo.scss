@@ -1,0 +1,59 @@
+@import "colors";
+
+@mixin logo {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 120%;
+}
+
+
+.logo {
+  margin: 14px 34px 14px 0;
+  padding: 4px;
+  position: relative;
+  width: 82px;
+  height: 52px;
+
+    &__header {
+      border: 1px solid $border-text;
+      border-radius: 2px;
+
+      @media (max-width:  640px) {
+        border: none;
+      }
+    }
+
+    &__footer {
+      border: 1px solid $border-text;
+      border-radius: 2px;
+      @media (max-width:  340px) {
+        border: none;
+      }
+    }
+
+  &__img {
+    position: absolute;
+    top: 35%;
+    left: 10%;
+  }
+
+  &__text {
+    font-style: normal;
+    @include logo;
+    text-align: center;
+    color: $border-text;
+
+    @media (max-width:  640px) {
+      font-size: 13px;
+    }
+
+    &__text--footer {
+      @include logo;
+    }
+  }
+
+
+
+
+}
+
