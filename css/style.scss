@@ -1,29 +1,3 @@
-
-//$red-color: red;
-//
-//@mixin font {
-//  font-size: 12px;
-//  line-height: 15px;
-//}
-//
-//.header {
-//  @include font;
-//
-//  &__title {
-//    background: $red-color;
-//  }
-//
-//  &--warning {
-//
-//  }
-//}
-//
-//.section {
-//  @include font;
-//}
-
-
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -214,31 +188,17 @@ body {
 
 .slider {
   position: relative;
-  height: 872px;
 
   &__palma {
     position: absolute;
     left: 0;
-    top: 48%;
+    top: 64%;
   }
 
   &__strelitzia {
     position: absolute;
     right: 0;
-    top: 69%;
-  }
-
-  &__container {
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-  }
-
-  &__photo {
-    display: flex;
-    transition: all ease 1s;
-    gap: 30px;
+    top: 83%;
   }
 
   &__card {
@@ -264,29 +224,56 @@ body {
   }
 
   &__control {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 15%;
-      cursor: pointer;
-  }
-
-  &__left {
-    left: 0;
-    right: auto;
+    margin-top: -15px;
   }
 
   &__right {
-    right: 0;
-    left: auto;
+    height: 30px;
+    width: 30px;
+    background-color: $friend-color;
+    border-radius: 50%;
+
+    &::after {
+      content: url('../image/svg/arrow-right.svg');
+      position: absolute;
+      top: -56%;
+    }
   }
 
-  &__arrow {
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+  &__left {
+    height: 30px;
+    width: 30px;
+    background-color: $friend-color;
+    border-radius: 50%;
+
+    &::after {
+      content: url('../image/svg/arrow-left.svg');
+      position: absolute;
+      top: -56%;
+    }
   }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__button {
+    margin: 60px auto 100px;
+    display: block;
+  }
+
+}
+
+.swiper {
+  width: 100%;
+  height: 850px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &-slide {
+    height: calc((100% - 30px) / 2) !important;
+  }
+
 }
 
 .friend {
@@ -613,6 +600,10 @@ body {
     }
   }
 
+  .swiper {
+    height: 801px;
+  }
+
   .backstage {
 
     &__wrapper {
@@ -656,13 +647,9 @@ body {
     &__title {
       margin: 40px 0;
     }
-
-
-
   }
 
   .reviews {
-
     padding: 100px 0 140px;
 
     &__item--last {
@@ -682,6 +669,8 @@ body {
       flex-wrap: wrap;
     }
   }
+
+
 }
 
 @media (max-width: 640px) {
@@ -720,8 +709,11 @@ body {
     &__button {
       transform: translateX(-101%);
     }
-
   }
+
+  .swiper {
+    height: 756px;
+    }
 
   .backstage {
 
@@ -875,7 +867,26 @@ body {
     width: 100%;
   }
 
-  .backstage {
+  .slider__button {
+    width: 100%;
+  }
+
+  .swiper {
+    height: 1388px;
+
+    &-slide {
+      height: calc((100% - 5px) / 4) !important;
+    }
+
+    &-button-next,
+    &-button-prev {
+      display: none;
+    }
+
+  }
+
+
+    .backstage {
 
     &__flower {
       padding: 0

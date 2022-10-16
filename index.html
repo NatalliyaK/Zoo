@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Zoo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -79,9 +80,9 @@
         </div>
     </section>
     <section class="slider">
-        <div class="slider__container wrapper">
-            <div class="slider__photo">
-                <div class="slider__card">
+        <div class="slider__container wrapper swiper">
+            <div class="slider__photo swiper-wrapper">
+                <div class="slider__card swiper-slide">
                     <img class="slider__image" src="./image/slider/birds.png" alt="photo">
                     <div class="slider__description">
                         <div class="slider__photo-name">
@@ -93,7 +94,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="slider__card">
+                <div class="slider__card swiper-slide">
                     <img class="slider__image" src="./image/slider/giraffe_card.jpg" alt="photo">
                     <div class="slider__description">
                         <div class="slider__photo-name">
@@ -104,18 +105,95 @@
                             <img src="image/svg/meet-fish_icon.svg" alt="icon">
                         </div>
                     </div>
+                </div>
+                <div class="slider__card swiper-slide">
+                    <img class="slider__image" src="./image/slider/cheetah.png" alt="photo">
+                    <div class="slider__description">
+                        <div class="slider__photo-name">
+                            <h3 class="slider__title">Cheetah</h3>
+                            <p class="slider__text">Native to South America</p>
+                        </div>
+                        <div class="slider__icon">
+                            <img src="image/svg/meet-fish_icon.svg" alt="icon">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="slider__card swiper-slide">
+                    <img class="slider__image" src="./image/slider/hare_card.jpg" alt="photo">
+                    <div class="slider__description">
+                        <div class="slider__photo-name">
+                            <h3 class="slider__title">Hare</h3>
+                            <p class="slider__text">Native to South America</p>
+                        </div>
+                        <div class="slider__icon">
+                            <img src="image/svg/meet-fish_icon.svg" alt="icon">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="slider__card swiper-slide">
+                    <img class="slider__image" src="./image/slider/monkey.png" alt="photo">
+                    <div class="slider__description">
+                        <div class="slider__photo-name">
+                            <h3 class="slider__title">Monkey</h3>
+                            <p class="slider__text">Native to South America</p>
+                        </div>
+                        <div class="slider__icon">
+                            <img src="image/svg/meet-fish_icon.svg" alt="icon">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="slider__card swiper-slide">
+                    <img class="slider__image" src="./image/slider/sloth.png" alt="photo">
+                    <div class="slider__description">
+                        <div class="slider__photo-name">
+                            <h3 class="slider__title">Sloth</h3>
+                            <p class="slider__text">Native to South America</p>
+                        </div>
+                        <div class="slider__icon">
+                            <img src="image/svg/meet-fish_icon.svg" alt="icon">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="slider__card swiper-slide">
+                    <img class="slider__image" src="./image/slider/panda.png" alt="photo">
+                    <div class="slider__description">
+                        <div class="slider__photo-name">
+                            <h3 class="slider__title">Panda</h3>
+                            <p class="slider__text">Native to South America</p>
+                        </div>
+                        <div class="slider__icon">
+                            <img src="image/svg/meet-fish_icon.svg" alt="icon">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="slider__card swiper-slide">
+                    <img class="slider__image" src="./image/slider/penguin.png" alt="photo">
+                    <div class="slider__description">
+                        <div class="slider__photo-name">
+                            <h3 class="slider__title">Penguin</h3>
+                            <p class="slider__text">Native to South America</p>
+                        </div>
+                        <div class="slider__icon">
+                            <img src="image/svg/meet-fish_icon.svg" alt="icon">
+                        </div>
+                    </div>
 
                 </div>
             </div>
-
-            <button class="button button--orange button--rounded button--rounded">choose your favorite</button>
+            <div class="slider__control swiper-button-prev slider__left">
+                <div class="slider__arrow left"></div>
+            </div>
+            <div class="slider__control swiper-button-next slider__right">
+                <div class="slider__arrow right">
+                </div>
+            </div>
         </div>
-        <div class="slider__control slider__left">
-            <div class="slider__arrow left">&lt</div>
-        </div>
-        <div class="slider__control slider__right">
-            <div class="slider__arrow right">&gt</div>
-        </div>
+        <button class="button button--orange button--rounded button--rounded slider__button">choose your favorite</button>
         <div class="slider__palma">
             <picture>
                 <source srcset="./image/slider/palm_fotosmall.png" type="image/png" media="(min-width: 640px) and (max-width: 1000px)">
@@ -132,7 +210,6 @@
                 <img src="./image/slider/strelitzia.png" alt="Flower">
             </picture>
         </div>
-
     </section>
     <section class="friend">
         <div class="friend__container wrapper">
@@ -327,6 +404,9 @@
         </div>
     </div>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="js/swiper.js"></script>
 <script src="js/index.js"></script>
 </body>
 </html>

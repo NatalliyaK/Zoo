@@ -176,25 +176,15 @@ body {
     line-height: 140%; }
 
 .slider {
-  position: relative;
-  height: 872px; }
+  position: relative; }
   .slider__palma {
     position: absolute;
     left: 0;
-    top: 48%; }
+    top: 64%; }
   .slider__strelitzia {
     position: absolute;
     right: 0;
-    top: 69%; }
-  .slider__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-  .slider__photo {
-    display: flex;
-    transition: all ease 1s;
-    gap: 30px; }
+    top: 83%; }
   .slider__card {
     border-radius: 5px;
     border: 1px solid #F9804B; }
@@ -210,22 +200,38 @@ body {
     font-size: 15px;
     line-height: 120%; }
   .slider__control {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 15%;
-    cursor: pointer; }
-  .slider__left {
-    left: 0;
-    right: auto; }
+    margin-top: -15px; }
   .slider__right {
-    right: 0;
-    left: auto; }
-  .slider__arrow {
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%); }
+    height: 30px;
+    width: 30px;
+    background-color: #FE9013;
+    border-radius: 50%; }
+    .slider__right::after {
+      content: url("../image/svg/arrow-right.svg");
+      position: absolute;
+      top: -56%; }
+  .slider__left {
+    height: 30px;
+    width: 30px;
+    background-color: #FE9013;
+    border-radius: 50%; }
+    .slider__left::after {
+      content: url("../image/svg/arrow-left.svg");
+      position: absolute;
+      top: -56%; }
+  .slider__image {
+    width: 100%; }
+  .slider__button {
+    margin: 60px auto 100px;
+    display: block; }
+
+.swiper {
+  width: 100%;
+  height: 850px;
+  margin-left: auto;
+  margin-right: auto; }
+  .swiper-slide {
+    height: calc((100% - 30px) / 2) !important; }
 
 .friend {
   background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
@@ -457,6 +463,9 @@ body {
     .watch__container {
       padding-right: 60px; }
 
+  .swiper {
+    height: 801px; }
+
   .backstage__wrapper {
     padding: 105px 0 137px; }
   .backstage__image {
@@ -513,6 +522,9 @@ body {
       padding-right: 0; }
     .watch__button {
       transform: translateX(-101%); }
+
+  .swiper {
+    height: 756px; }
 
   .backstage__flower {
     display: flex;
@@ -601,6 +613,16 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%; }
+
+  .slider__button {
+    width: 100%; }
+
+  .swiper {
+    height: 1388px; }
+    .swiper-slide {
+      height: calc((100% - 5px) / 4) !important; }
+    .swiper-button-next, .swiper-button-prev {
+      display: none; }
 
   .backstage__flower {
     padding: 0; }
