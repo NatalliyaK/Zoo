@@ -31,7 +31,7 @@ li {
   font-weight: 400;
   font-size: 16px;
   line-height: 140%;
-  }
+}
 
 .wrapper {
   max-width: 1160px;
@@ -54,26 +54,18 @@ body {
     line-height: 140%;
   }
 
-  &__group {
-    display: flex;
-  }
-
-  &__logo--text {
-
-  }
-
+  &__group,
   &__nav {
     display: flex;
   }
 
   &__item {
-    padding: 29px 29px;
-  }
-
-  &__item--text:hover {
-    @include bg-button;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    padding: 29px;
+    &--text:hover {
+      @include bg-button;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 
   &__link {
@@ -103,28 +95,27 @@ body {
     color: $border-text;
     padding-top: 92px;
     z-index: 0;
-  }
 
-  &__text::before {
-    right: 92px;
-    top: 18px;
-    z-index: -1;
-    width: 465px;
-    height: 465px;
-    @include bg-button;
-    border-radius: 50%;
-    position: absolute;
-    content: '';
-  }
+    &::before {
+      right: 92px;
+      top: 18px;
+      z-index: -1;
+      width: 465px;
+      height: 465px;
+      @include bg-button;
+      border-radius: 50%;
+      position: absolute;
+      content: '';
+    }
 
-  &__text--mark {
-    color: #FFEE2E;
+    &--mark {
+      color: #FFEE2E;
+    }
   }
 
   &__button {
     margin-top: 60px;
   }
-
 }
 
 .button-mob {
@@ -141,7 +132,6 @@ body {
   &__wrapper {
     display: flex;
     padding: 140px 0 180px;
-
   }
 
   &__container {
@@ -182,8 +172,6 @@ body {
     font-size: 16px;
     line-height: 140%;
   }
-
-
 }
 
 .slider {
@@ -261,7 +249,6 @@ body {
     margin: 60px auto 100px;
     display: block;
   }
-
 }
 
 .swiper {
@@ -273,7 +260,6 @@ body {
   &-slide {
     height: calc((100% - 30px) / 2) !important;
   }
-
 }
 
 .friend {
@@ -291,21 +277,42 @@ body {
     padding: 40px 40px 60px 100px;
   }
 
-  &__text--title {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 48px;
-    line-height: 120%;
-    text-align: center;
-    color: $friend-color;
-  }
+  &__text {
+    &--title {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 120%;
+      text-align: center;
+      color: $friend-color;
+    }
+    &--recommendation {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 120%;
+      color: $text-color;
+      margin-top: 30px;
+    }
 
-  &__text--recommendation {
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 120%;
-    color: $text-color;
-    margin-top: 30px;
+    &--item {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 130%;
+      color: $text-color;
+      margin: 25px 0;
+    }
+
+    &--item2 {
+      font-weight: 500;
+      max-width: 863px;
+    }
+
+    &--link {
+      color:$text-color;
+      border-bottom: 1px solid $friend-color;
+      padding-bottom: 1px;
+    }
   }
 
   &__title {
@@ -315,26 +322,6 @@ body {
     color: $text-color;
     margin: 60px 0 40px;
     text-align: center;
-  }
-
-  &__text--item {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 130%;
-    color: $text-color;
-    margin: 25px 0;
-  }
-
-  &__text--item2 {
-    font-weight: 500;
-    max-width: 863px;
-  }
-
-  &__text--link {
-    color:$text-color;
-    border-bottom: 1px solid $friend-color;
-    padding-bottom: 1px;
   }
 
   &__icon {
@@ -386,7 +373,6 @@ body {
   &__button {
     margin-top: 60px;
   }
-
 }
 
 .reviews {
@@ -459,7 +445,6 @@ body {
   &__button {
     margin-top: 60px;
   }
-
 }
 
 .footer {
@@ -600,12 +585,21 @@ body {
     }
   }
 
+  .slider {
+    &__strelitzia {
+      top: 92%;
+    }
+
+    &__palma {
+      top: 89%;
+    }
+  }
+
   .swiper {
     height: 801px;
   }
 
   .backstage {
-
     &__wrapper {
       padding: 105px 0 137px;
     }
@@ -669,8 +663,6 @@ body {
       flex-wrap: wrap;
     }
   }
-
-
 }
 
 @media (max-width: 640px) {
@@ -685,7 +677,6 @@ body {
     &__nav--container {
       display: none;
     }
-
   }
 
   .watch {
@@ -711,9 +702,15 @@ body {
     }
   }
 
+  .slider {
+    &__strelitzia {
+      top: 97%;
+    }
+  }
+
   .swiper {
     height: 756px;
-    }
+  }
 
   .backstage {
 
@@ -773,7 +770,6 @@ body {
     &__icon-container:last-child::before {
       content: none;
     }
-
   }
 
   .reviews {
@@ -802,7 +798,6 @@ body {
       margin-top: 40px;
       width: 240px;
     }
-
   }
 
   .footer {
@@ -829,10 +824,9 @@ body {
       justify-content: center;
     }
   }
-
 }
 
-@media (max-width:  320px) {
+@media (max-width: 320px) {
   .wrapper {
     max-width: 300px;
   }
@@ -867,8 +861,18 @@ body {
     width: 100%;
   }
 
-  .slider__button {
-    width: 100%;
+  .slider {
+    &__strelitzia {
+      top: 103%;
+    }
+
+    &__palma {
+      top: 102%;
+    }
+
+    &__button {
+      width: 100%;
+    }
   }
 
   .swiper {
@@ -882,12 +886,9 @@ body {
     &-button-prev {
       display: none;
     }
-
   }
 
-
-    .backstage {
-
+  .backstage {
     &__flower {
       padding: 0
     }
@@ -970,14 +971,9 @@ body {
       margin-top: 30px;
       width: 240px;
     }
-
-
-
-
   }
 
   .footer {
-
     &__button {
       width: 100%;
     }

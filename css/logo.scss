@@ -14,22 +14,22 @@
   width: 82px;
   height: 52px;
 
-    &__header {
-      border: 1px solid $border-text;
-      border-radius: 2px;
+  &__header {
+    border: 1px solid $border-text;
+    border-radius: 2px;
 
-      @media (max-width:  640px) {
-        border: none;
-      }
+    @media (max-width: 640px) {
+      border: none;
     }
+  }
 
-    &__footer {
-      border: 1px solid $border-text;
-      border-radius: 2px;
-      @media (max-width:  340px) {
-        border: none;
-      }
+  &__footer {
+    border: 1px solid $border-text;
+    border-radius: 2px;
+    @media (max-width: 340px) {
+      border: none;
     }
+  }
 
   &__img {
     position: absolute;
@@ -51,9 +51,4 @@
       @include logo;
     }
   }
-
-
-
-
 }
-
