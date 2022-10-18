@@ -252,10 +252,19 @@ body {
 }
 
 .swiper {
-  width: 100%;
-  height: 850px;
-  margin-left: auto;
-  margin-right: auto;
+  &__slider {
+    width: 100%;
+    height: 850px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__reviews {
+    width: 100%;
+    height: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   &-slide {
     height: calc((100% - 30px) / 2) !important;
@@ -395,11 +404,6 @@ body {
     margin-bottom: 47px;
   }
 
-  &__container {
-    display: flex;
-    gap: 30px;
-  }
-
   &__item {
     width: 268px;
     height: 391px;
@@ -440,6 +444,17 @@ body {
     font-size: 15px;
     line-height: 120%;
     color: #767474;
+  }
+
+  &__scrollbar {
+    max-width: 600px;
+    height: 8px;
+
+    &--form {
+      background: #F5F7F6;
+      border-radius: 5px;
+      border: 1px solid $border-color;
+    }
   }
 
   &__button {
@@ -542,6 +557,10 @@ body {
   }
 }
 
+.donate{
+  @include bg-donate;
+}
+
 @media (max-width: 1000px) {
   .wrapper {
     max-width: 940px;
@@ -596,7 +615,9 @@ body {
   }
 
   .swiper {
-    height: 801px;
+    &__slider {
+      height: 801px;
+    }
   }
 
   .backstage {
@@ -645,11 +666,6 @@ body {
 
   .reviews {
     padding: 100px 0 140px;
-
-    &__item--last {
-      display: none;
-    }
-
   }
 
   .footer {
@@ -709,7 +725,9 @@ body {
   }
 
   .swiper {
-    height: 756px;
+    &__slider {
+      height: 756px;
+    }
   }
 
   .backstage {
@@ -876,7 +894,9 @@ body {
   }
 
   .swiper {
-    height: 1388px;
+    &__slider{
+      height: 1388px;
+    }
 
     &-slide {
       height: calc((100% - 5px) / 4) !important;
