@@ -1,10 +1,15 @@
-$color: black;
+$color: #000000;
 $text-color: #333B41;
 $border-color: #F9804B;
 $border-form: #4B9200;
 $border-text: #FFFFFF;
 $friend-color: #FE9013;
 $pink-gradient: #FEBDAB;
+$subtitle-donate: #FE9013;
+$bg-donate-container:  rgba(255, 255, 255, 0.52);
+$donate-line: #404950;
+$mark: #FFEE2E;
+$donate-input: #929699;
 
 @mixin bg-button {
   background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
@@ -12,4 +17,8 @@ $pink-gradient: #FEBDAB;
 
 @mixin bg-donate {
   background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+}
+
+@mixin br-reviews {
+  background: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
 }

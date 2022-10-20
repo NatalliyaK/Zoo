@@ -23,6 +23,14 @@ li {
   margin: 0;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+
 @import "logo";
 @import "button";
 @import "colors";
@@ -109,7 +117,7 @@ body {
     }
 
     &--mark {
-      color: #FFEE2E;
+      color: $mark;
     }
   }
 
@@ -405,13 +413,17 @@ body {
   }
 
   &__item {
-    width: 268px;
-    height: 391px;
     background: #F1F3F2;
-    border-radius: 20px;
-    border: 1px solid $pink-gradient;
     padding: 15px 15px 19px;
-    overflow: hidden;
+
+    &--border {
+      border-radius: 20px;
+      @include br-reviews;
+      padding: 3px;
+      //height: 391px;
+      overflow: hidden;
+      //width: 268px;
+    }
   }
 
   &__image-text {
@@ -559,6 +571,263 @@ body {
 
 .donate{
   @include bg-donate;
+  padding: 40px 0 180px;
+
+  &__title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 130%;
+    color: $border-text;
+  }
+
+  &__text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: $border-text;
+    padding: 10px 0 40px;
+  }
+
+  &__subtitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 130%;
+    color: $subtitle-donate;
+  }
+
+  &__container {
+    background: $bg-donate-container;
+    border-radius: 20px;
+    min-height: 964px;
+    padding: 40px 92px 62px;
+    margin-top: 60px;
+
+    &--title{
+      font-style: normal;
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 120%;
+      text-align: center;
+      color: $subtitle-donate;
+    }
+
+    &--text {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 120%;
+      color: $text-color;
+      padding: 20px 0 60px;
+    }
+
+    &--amount {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: $color;
+    }
+  }
+
+  &__number--form {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 72px;
+    line-height: 80%;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color;
+    margin-bottom: 11px;
+  }
+
+  &__image {
+    margin-bottom: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+
+  &__line {
+    margin-top: 10px;
+    position: relative;
+    width: 976px;
+    height: 27px;
+    z-index: 10;
+    background: $donate-line;
+    border-radius: 2px;
+    margin-bottom: 12px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 915px;
+      height: 2px;
+      left: 31px;
+      top: 13px;
+      background: #72828E;
+    }
+  }
+
+  &__line {
+    &-radio {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 25px;
+
+      &--money {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 140%;
+        text-transform: uppercase;
+        color: $text-color;
+      }
+    }
+    &-money {
+      display: flex;
+
+      &--item {
+        margin-right: 50px;
+      }
+
+      :nth-child(4),
+      :nth-child(5),
+      :nth-child(6) {
+        margin-left: 20px;
+      }
+
+      :nth-child(7),
+      :nth-child(8) {
+        margin-left: 40px;
+      }
+
+    }
+
+    &-input {
+      width: 10px;
+      height: 10px;
+      text-decoration: none;
+
+      &::after {
+        content: '';
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: $mark;
+        display: inline-block;
+        visibility: visible;
+        position: relative;
+        z-index: 1;
+      }
+
+      &:checked {
+        background: yellow;
+        appearance: none;
+        border-radius: 50%;
+        z-index: 1;
+        position: relative;
+        margin-top: 4px;
+
+        &:after {
+          content: '';
+          width: 40px;
+          height: 40px;
+          position: relative;
+          display: inline-block;
+          top: -15px;
+          left: -15px;
+          background: url("../image/donate/roller_icon.svg");
+          cursor: pointer;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    margin: 0 auto;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 50px;
+    position: relative;
+
+    &-input {
+      width: 268px;
+      height: 54px;
+      border: 1px solid $donate-input;
+      border-radius: 2px;
+      padding-left: 9px;
+      background-color: transparent;
+
+      &--font {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: $donate-input;
+      }
+    }
+
+    &-label {
+      position: absolute;
+      top: 24%;
+      right: 37%;
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    &-radio {
+      border: transparent;
+      appearance: none;
+      width: 16px;
+      height: 16px;
+      background-color: transparent;
+      border-radius: 50%;
+      margin: 0 10px 0 0;
+      cursor: pointer;
+
+      &-group {
+        margin: 25px 0 30px;
+        display: flex;
+        justify-content: center;
+
+          & label:first-of-type {
+            margin-right: 42px;
+          }
+
+          & label {
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+          }
+      }
+
+      &:not(:checked) {
+        border: 1px solid $friend-color;
+      }
+
+      &:checked {
+        background-color: $border-form;
+      }
+    }
+
+    &-text {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: $text-color;
+      margin-top: 30px;
+    }
+  }
 }
 
 @media (max-width: 1000px) {
