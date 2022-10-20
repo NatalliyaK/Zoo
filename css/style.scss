@@ -601,7 +601,7 @@ body {
   &__container {
     background: $bg-donate-container;
     border-radius: 20px;
-    min-height: 964px;
+    max-height: 964px;
     padding: 40px 92px 62px;
     margin-top: 60px;
 
@@ -654,8 +654,8 @@ body {
   &__line {
     margin-top: 10px;
     position: relative;
-    width: 976px;
-    height: 27px;
+    max-width: 976px;
+    max-height: 27px;
     z-index: 10;
     background: $donate-line;
     border-radius: 2px;
@@ -830,6 +830,40 @@ body {
   }
 }
 
+@media (max-width: 1200px) {
+  .donate {
+    padding-bottom: 30px;
+    &__wrapper {
+      max-width: 940px;
+    }
+
+    &__line::after {
+      width: 745px;
+    }
+
+    &__text {
+      padding-top: 30px;
+    }
+
+    &__container {
+      padding: 20px 65px 45px;
+
+      &--text {
+        padding-top: 10px;
+      }
+    }
+
+    &__line-money--item {
+      margin-right: 25px;
+
+      &:nth-child(6) {
+        margin-left: 25px;
+      }
+    }
+  }
+
+}
+
 @media (max-width: 1000px) {
   .wrapper {
     max-width: 940px;
@@ -940,12 +974,32 @@ body {
   .footer {
     padding: 40px 30px;
   }
+
+  .donate {
+    &__wrapper {
+      max-width: 700px;
+    }
+
+    &__line::after {
+      width: 650px;
+    }
+  }
 }
 
 @media (max-width: 900px) {
   .backstage {
     &__wrapper {
       flex-wrap: wrap;
+    }
+  }
+
+  .donate {
+    &__wrapper {
+      max-width: 600px;
+    }
+
+    &__line::after {
+      width: 600px;
     }
   }
 }
@@ -1278,6 +1332,16 @@ body {
     &__information {
       display: flex;
       justify-content: center;
+    }
+  }
+
+  .donate {
+    &__wrapper {
+      max-width: 300px;
+    }
+
+    &__line::after {
+      width: 300px;
     }
   }
 }
