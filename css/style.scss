@@ -981,7 +981,26 @@ body {
     }
 
     &__line::after {
-      width: 650px;
+      width: 513px;
+    }
+
+    &__line-radio--money {
+      font-size: 18px;
+    }
+
+    &__line-money--item {
+      margin-right: 20px;
+    }
+
+    &__line-money {
+      :nth-child(5),
+      :nth-child(6) {
+        margin-left: 10px;
+      }
+
+      :nth-child(7) {
+        margin-left: 22px;
+      }
     }
   }
 }
@@ -999,8 +1018,21 @@ body {
     }
 
     &__line::after {
-      width: 600px;
+      width: 412px;
     }
+
+    &__line-radio--money {
+      font-size: 16px;
+    }
+
+    &__line-money--item {
+      margin-right: 10px;
+    }
+
+    &__line-money:nth-child(6) {
+      margin-left: 6px;
+    }
+
   }
 }
 
@@ -1163,6 +1195,23 @@ body {
 
     &__information {
       justify-content: center;
+    }
+  }
+  
+  .donate {
+    &__wrapper {
+      max-width: 550px;
+    }
+
+    &__title {
+      font-size: 24px;
+      line-height: 120%;
+    }
+
+    &__container--amount,
+    &__line,
+    &__money {
+      display: none;
     }
   }
 }
@@ -1340,8 +1389,8 @@ body {
       max-width: 300px;
     }
 
-    &__line::after {
-      width: 300px;
+    &__container {
+      padding: 0 4px 1px;
     }
   }
 }
