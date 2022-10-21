@@ -223,12 +223,22 @@ body {
     margin-top: -15px;
   }
 
-  &__right {
+  &__right,
+  &__left {
     height: 30px;
     width: 30px;
     background-color: $friend-color;
     border-radius: 50%;
 
+    &:hover {
+      background: $border-color;
+    }
+
+    &:active {
+      background: $border-form;
+    }
+  }
+  &__right {
     &::after {
       content: url('../image/svg/arrow-right.svg');
       position: absolute;
@@ -237,11 +247,6 @@ body {
   }
 
   &__left {
-    height: 30px;
-    width: 30px;
-    background-color: $friend-color;
-    border-radius: 50%;
-
     &::after {
       content: url('../image/svg/arrow-left.svg');
       position: absolute;
@@ -276,6 +281,13 @@ body {
 
   &-slide {
     height: calc((100% - 30px) / 2) !important;
+  }
+
+  &__reviews {
+    width: 100%;
+    height: 820px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -415,6 +427,7 @@ body {
   &__item {
     background: #F1F3F2;
     padding: 15px 15px 19px;
+    border-radius: 4%;
 
     &--border {
       border-radius: 20px;
@@ -488,11 +501,20 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 140%;
-    color: $border-form;
     padding: 10px 40px;
     background: #F1F3F2;
-    border: 1px solid $border-form;
     border-radius: 5px;
+    border: 1px solid transparent;
+
+    &:active {
+      color: $border-form;
+      border: 1px solid $border-form;
+    }
+
+    &:hover {
+      color: $border-color;
+      border: 1px solid $border-color;
+    }
   }
 
   &__form--title {
@@ -917,10 +939,8 @@ body {
     }
   }
 
-  .swiper {
-    &__slider {
+  .swiper__slider {
       height: 801px;
-    }
   }
 
   .backstage {
