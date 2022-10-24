@@ -50,6 +50,14 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 .header {
   background: $color;
 
@@ -588,6 +596,10 @@ body {
 
   &__item--text {
     padding-right: 58px;
+
+    &:hover {
+      color: $friend-color;
+    }
   }
 }
 
