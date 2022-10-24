@@ -782,6 +782,62 @@ body {
     position: static; }
     .header__link, .header__nav--container {
       display: none; }
+    .header__item {
+      padding: 13px 24px; }
+    .header__burger {
+      display: block;
+      width: 35px;
+      height: 30px;
+      position: relative;
+      cursor: pointer;
+      z-index: 100;
+      top: 22px; }
+      .header__burger span {
+        background-color: #FFFFFF;
+        position: absolute;
+        border-radius: 2px;
+        transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+        width: 100%;
+        height: 2px; }
+        .header__burger span:nth-child(1) {
+          top: 0;
+          left: 0; }
+        .header__burger span:nth-child(2) {
+          top: 13px;
+          left: 0; }
+        .header__burger span:nth-child(3) {
+          bottom: 0;
+          left: 0; }
+      .header__burger:not(.open):hover span:nth-child(1) {
+        transform: scaleX(0.8); }
+      .header__burger:not(.open):hover span:nth-child(2) {
+        transform: scaleX(0.5); }
+      .header__burger:not(.open):hover span:nth-child(3) {
+        transform: scaleX(0.8); }
+      .header__burger.open span:nth-child(1) {
+        transform: rotate(45deg);
+        top: 13px; }
+      .header__burger.open span:nth-child(2) {
+        transform: scale(0);
+        transition-duration: 50ms; }
+      .header__burger.open span:nth-child(3) {
+        top: 13px;
+        transform: rotate(-45deg); }
+    .header__mob {
+      background: #FEBDAB;
+      border-radius: 10px;
+      color: #FFFFFF;
+      position: fixed;
+      top: 0;
+      right: 0;
+      transform: translateX(100%);
+      transition: transform 0.5s;
+      width: 100%;
+      z-index: 1;
+      opacity: 0.9;
+      padding-top: 90px; }
+      .header__mob.active {
+        transform: translateX(0); }
 
   .watch {
     height: 373px; }
@@ -796,6 +852,12 @@ body {
       padding-right: 0; }
     .watch__button {
       transform: translateX(-101%); }
+    .watch__button {
+      display: none; }
+
+  .button-mob {
+    display: block;
+    margin-top: 20px; }
 
   .slider__strelitzia {
     top: 97%; }

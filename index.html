@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zoo</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.css">
@@ -17,7 +18,7 @@
                 </a>
                 <img src="image/svg/bamboo.svg" class="logo__img" alt="logo">
             </div>
-            <nav class="header__nav--container">
+            <nav class="header__nav--container hide">
                 <ul class="header__nav">
                     <li class="header__item">
                         <a href="#" class="header__item--text about-click">About</a>
@@ -39,6 +40,20 @@
         </div>
         <div class="header__link">
             <a href="#">Designed by ©</a>
+        </div>
+        <nav class="header__mob hide">
+            <ul>
+                <li  class="header__item" class="about-click ">About</li>
+                <li class="header__item">Map</li>
+                <li class="header__item">Zoos</li>
+                <li class="header__item" class="donate-click">Donate</li>
+                <li class="header__item" >Contact</li>
+            </ul>
+        </nav>
+        <div class="header__burger hide">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </div>
 </header>
