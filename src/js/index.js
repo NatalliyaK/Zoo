@@ -1,3 +1,6 @@
+import "../css/style.scss";
+
+
 const donateClick = document.querySelector('.donate-click'),
     aboutClick = document.querySelector('.about-click'),
     backstage = document.querySelector('.backstage'),

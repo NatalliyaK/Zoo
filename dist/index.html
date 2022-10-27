@@ -6,7 +6,7 @@
     <title>Zoo</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.css">
-</head>
+<script defer src="index.js"></script><link href="main.css" rel="stylesheet"></head>
 <body>
 <header class="header">
     <div class="header__container wrapper">
@@ -43,11 +43,21 @@
         </div>
         <nav class="header__mob hide">
             <ul>
-                <li  class="header__item" class="about-click ">About</li>
-                <li class="header__item">Map</li>
-                <li class="header__item">Zoos</li>
-                <li class="header__item" class="donate-click">Donate</li>
-                <li class="header__item" >Contact</li>
+                <li  class="header__item about-click">
+                    <a href="#">About</a>
+                </li>
+                <li class="header__item">
+                    <a href="#">Map</a>
+                </li>
+                <li class="header__item">
+                    <a href="#">Zoos</a>
+                </li>
+                <li class="header__item donate-click">
+                    <a href="#">Donate</a>
+                </li>
+                <li class="header__item">
+                    <a href="#">Contact</a>
+                </li>
             </ul>
         </nav>
         <div class="header__burger hide">
@@ -75,8 +85,8 @@
         <div class="backstage__wrapper wrapper">
             <div class="backstage__image">
                 <picture>
-                    <source srcset="./image/backstage/smalldesk.png" type="image/png" media="(min-width: 640px) and (max-width: 1000px)">
-                    <img src="./image/backstage/desk.png" alt="photo">
+                    <source srcset="image/backstage/smalldesk.png" type="image/png" media="(min-width: 640px) and (max-width: 1000px)">
+                    <img src="image/backstage/desk.png" alt="photo">
                 </picture>
             </div>
             <div class="backstage__container">
@@ -88,9 +98,9 @@
         </div>
         <div class="backstage__flower">
             <picture>
-                <source srcset="./image/flower/flower_tablet.png" type="image/png" media="(min-width: 320px) and (max-width: 640px)">
-                <source srcset="./image/flower/flower_mob.png" type="image/png" media="(max-width: 320px)">
-                <img src="./image/flower/flower1.png" alt="Flower">
+                <source srcset="image/flower/flower_tablet.png" type="image/png" media="(min-width: 320px) and (max-width: 640px)">
+                <source srcset="image/flower/flower_mob.png" type="image/png" media="(max-width: 320px)">
+                <img src="image/flower/flower1.png" alt="Flower">
             </picture>
         </div>
     </section>
@@ -98,7 +108,7 @@
         <div class="slider__container wrapper swiper swiper__slider">
             <div class="slider__photo swiper-wrapper">
                 <div class="slider__card swiper-slide">
-                    <img class="slider__image" src="./image/slider/birds.png" alt="photo">
+                    <img class="slider__image" src="image/slider/birds.png" alt="photo">
                     <div class="slider__description">
                         <div class="slider__photo-name">
                             <h3 class="slider__title">Eagles</h3>
@@ -110,7 +120,7 @@
                     </div>
                 </div>
                 <div class="slider__card swiper-slide">
-                    <img class="slider__image" src="./image/slider/giraffe_card.jpg" alt="photo">
+                    <img class="slider__image" src="image/slider/giraffe_card.jpg" alt="photo">
                     <div class="slider__description">
                         <div class="slider__photo-name">
                             <h3 class="slider__title">Giraffe</h3>
@@ -122,7 +132,7 @@
                     </div>
                 </div>
                 <div class="slider__card swiper-slide">
-                    <img class="slider__image" src="./image/slider/cheetah.png" alt="photo">
+                    <img class="slider__image" src="image/slider/cheetah.png" alt="photo">
                     <div class="slider__description">
                         <div class="slider__photo-name">
                             <h3 class="slider__title">Cheetah</h3>
@@ -135,7 +145,7 @@
 
                 </div>
                 <div class="slider__card swiper-slide">
-                    <img class="slider__image" src="./image/slider/hare_card.jpg" alt="photo">
+                    <img class="slider__image" src="image/slider/hare_card.jpg" alt="photo">
                     <div class="slider__description">
                         <div class="slider__photo-name">
                             <h3 class="slider__title">Hare</h3>
@@ -148,7 +158,7 @@
 
                 </div>
                 <div class="slider__card swiper-slide">
-                    <img class="slider__image" src="./image/slider/monkey.png" alt="photo">
+                    <img class="slider__image" src="image/slider/monkey.png" alt="photo">
                     <div class="slider__description">
                         <div class="slider__photo-name">
                             <h3 class="slider__title">Monkey</h3>
@@ -161,7 +171,7 @@
 
                 </div>
                 <div class="slider__card swiper-slide">
-                    <img class="slider__image" src="./image/slider/sloth.png" alt="photo">
+                    <img class="slider__image" src="image/slider/sloth.png" alt="photo">
                     <div class="slider__description">
                         <div class="slider__photo-name">
                             <h3 class="slider__title">Sloth</h3>
@@ -174,7 +184,7 @@
 
                 </div>
                 <div class="slider__card swiper-slide">
-                    <img class="slider__image" src="./image/slider/panda.png" alt="photo">
+                    <img class="slider__image" src="image/slider/panda.png" alt="photo">
                     <div class="slider__description">
                         <div class="slider__photo-name">
                             <h3 class="slider__title">Panda</h3>
@@ -187,7 +197,7 @@
 
                 </div>
                 <div class="slider__card swiper-slide">
-                    <img class="slider__image" src="./image/slider/penguin.png" alt="photo">
+                    <img class="slider__image" src="image/slider/penguin.png" alt="photo">
                     <div class="slider__description">
                         <div class="slider__photo-name">
                             <h3 class="slider__title">Penguin</h3>
@@ -211,18 +221,18 @@
         <button class="button button--orange button--rounded button--rounded slider__button">choose your favorite</button>
         <div class="slider__palma">
             <picture>
-                <source srcset="./image/slider/palm_fotosmall.png" type="image/png" media="(min-width: 640px) and (max-width: 1000px)">
-                <source srcset="./image/slider/palm_fototablet.png" type="image/png" media="(min-width: 320px) and (max-width: 640px)">
-                <source srcset="./image/slider/palm_fotomob.png" type="image/png" media="(max-width: 320px)">
-                <img src="./image/slider/palm_foto.png" alt="Flower">
+                <source srcset="image/slider/palm_fotosmall.png" type="image/png" media="(min-width: 640px) and (max-width: 1000px)">
+                <source srcset="image/slider/palm_fototablet.png" type="image/png" media="(min-width: 320px) and (max-width: 640px)">
+                <source srcset="image/slider/palm_fotomob.png" type="image/png" media="(max-width: 320px)">
+                <img src="image/slider/palm_foto.png" alt="Flower">
             </picture>
         </div>
         <div class="slider__strelitzia">
             <picture>
-                <source srcset="./image/slider/strelitziasmall.png" type="image/png" media="(min-width: 640px) and (max-width: 1000px)">
-                <source srcset="./image/slider/strelitziatablet.png" type="image/png" media="(min-width: 320px) and (max-width: 640px)">
-                <source srcset="./image/slider/strelitziamob.png" type="image/png" media="(max-width: 320px)">
-                <img src="./image/slider/strelitzia.png" alt="Flower">
+                <source srcset="image/slider/strelitziasmall.png" type="image/png" media="(min-width: 640px) and (max-width: 1000px)">
+                <source srcset="image/slider/strelitziatablet.png" type="image/png" media="(min-width: 320px) and (max-width: 640px)">
+                <source srcset="image/slider/strelitziamob.png" type="image/png" media="(max-width: 320px)">
+                <img src="image/slider/strelitzia.png" alt="Flower">
             </picture>
         </div>
     </section>
@@ -238,19 +248,19 @@
             <div class="friend__icon">
                 <div class="friend__icon-container">
                     <div class="friend__icon-container--item">
-                        <img src="./image/svg/pay.svg" class="friend__icon-container--svg" alt="icon">
+                        <img src="image/svg/pay.svg" class="friend__icon-container--svg" alt="icon">
                     </div>
                     <p class="friend__icon-container--text">Pay with card</p>
                 </div>
                 <div class="friend__icon-container">
                     <div class="friend__icon-container--item">
-                        <img src="./image/svg/zoo.svg" class="friend__icon-container--svg" alt="icon">
+                        <img src="image/svg/zoo.svg" class="friend__icon-container--svg" alt="icon">
                     </div>
                     <p class="friend__icon-container--text">Payment goes to the zoo</p>
                 </div>
                 <div class="friend__icon-container">
                     <div class="friend__icon-container--item">
-                        <img src="./image/svg/monkey.svg" class="friend__icon-container--svg" alt="icon">
+                        <img src="image/svg/monkey.svg" class="friend__icon-container--svg" alt="icon">
                     </div>
                     <p class="friend__icon-container--text">Your favourite animal gets delicious dish</p>
                 </div>
@@ -261,10 +271,10 @@
     <article class="reviews">
         <div class="reviews__leaf">
             <picture>
-                <source srcset="./image/leaf/desksmall.png" type="image/png" media="(min-width: 640px) and (max-width: 1000px)">
-                <source srcset="./image/leaf/tabl.png" type="image/png" media="(min-width: 320px) and (max-width: 640px)">
-                <source srcset="./image/leaf/mob.png" type="image/png" media="(max-width: 320px)">
-                <img src="./image/leaf/desk.png" alt="Flower">
+                <source srcset="image/leaf/desksmall.png" type="image/png" media="(min-width: 640px) and (max-width: 1000px)">
+                <source srcset="image/leaf/tabl.png" type="image/png" media="(min-width: 320px) and (max-width: 640px)">
+                <source srcset="image/leaf/mob.png" type="image/png" media="(max-width: 320px)">
+                <img src="image/leaf/desk.png" alt="Flower">
             </picture>
         </div>
         <div class="reviews__wrapper wrapper">
@@ -275,7 +285,7 @@
                     <div class="swiper-slide reviews__item--border">
                         <div class="reviews__item">
                                 <div class="reviews__item-title">
-                                    <img src="./image/userIcon/user_icon.svg" alt="icon">
+                                    <img src="image/userIcon/user_icon.svg" alt="icon">
                                     <div class="reviews__image-text">
                                         <h3 class="reviews__name-user">Michael John</h3>
                                         <p class="reviews__user-local">Local Austria
@@ -291,7 +301,7 @@
                     <div class="swiper-slide reviews__item--border">
                        <div class="reviews__item">
                            <div class="reviews__item-title">
-                               <img src="./image/userIcon/userman.png" alt="icon">
+                               <img src="image/userIcon/userman.png" alt="icon">
                                <div class="reviews__image-text">
                                    <h3 class="reviews__name-user">Mila Riksha</h3>
                                    <p class="reviews__user-local">Local Austria
@@ -308,7 +318,7 @@
                     <div class="swiper-slide reviews__item--border">
                         <div class="reviews__item">
                             <div class="reviews__item-title">
-                                <img src="./image/userIcon/userwomen.png" alt="icon">
+                                <img src="image/userIcon/userwomen.png" alt="icon">
                                 <div class="reviews__image-text">
                                     <h3 class="reviews__name-user">Oskar Samborsky</h3>
                                     <p class="reviews__user-local">Local Austria
@@ -327,7 +337,7 @@
                     <div class="swiper-slide reviews__item--border">
                         <div class="reviews__item">
                             <div class="reviews__item-title">
-                                <img src="./image/userIcon/woman.svg" alt="icon">
+                                <img src="image/userIcon/woman.svg" alt="icon">
                                 <div class="reviews__image-text">
                                     <h3 class="reviews__name-user">Fredericka Michelin</h3>
                                     <p class="reviews__user-local">Local Austria
@@ -363,8 +373,8 @@
                     </div>
                     <div class="donate__cross">&#10006;</div>
                     <picture>
-                        <source srcset="./image/donate/animals-widget-mob.svg" type="image/png" media="(max-width: 220px)">
-                        <img src="./image/donate/animals-widget.svg" alt="Flower">
+                        <source srcset="image/donate/animals-widget-mob.svg" type="image/png" media="(max-width: 220px)">
+                        <img src="image/donate/animals-widget.svg" alt="Flower">
                     </picture>
                 </div>
                 <h3 class="donate__container--amount">Amount</h3>
@@ -513,7 +523,6 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-<script src="js/swiper.js"></script>
-<script src="js/index.js"></script>
+<script src="../src/js/swiper.js"></script>
 </body>
 </html>
